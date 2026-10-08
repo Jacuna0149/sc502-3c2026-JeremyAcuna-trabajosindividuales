@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #eef4fb;
+    color: #243447;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seccion {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: #0b4f8a;
+    margin-bottom: 25px;
+}
+
+.barra-navegacion {
+    background-color: #0b4f8a;
+    border-bottom: 4px solid #5aa9e6;    
+}
+
+.navegacion {
+    display: flex;                      
+    justify-content: space-between;     
+    align-items: center;                
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.marca {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu ul {
+    list-style: none;                  
+    margin: 0;
+    padding: 0;
+    display: flex;                     
+    gap: 10px;                           
+}
+
+.menu a {                                
+    color: #dcecf8;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-bottom-color: #5aa9e6;        
+}
+
+.perfil-doctor {
+    background-color: white;
+    border: 1px solid #cddff0;
+    border-radius: 10px;
+    padding: 35px 30px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.nombre-doctor {
+    color: #0b4f8a;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.especialidad-doctor {
+    color: #5a6b7d;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+#descripcion-doctor {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.perfil-doctor > .boton {
+    margin-top: 5px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #1a73c9;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #0b4f8a;
+}
+
+.boton[href="#contacto"]:hover {
+    box-shadow: 0 3px 8px rgba(11, 79, 138, 0.4);
+}
+
+.lista-servicios {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.lista-servicios li {
+    background-color: #dcecf8;
+    color: #0b4f8a;
+    padding: 10px 18px;
+    border-radius: 20px;
+}
+
+.tarjetas {
+    display: flex;              
+    flex-wrap: wrap;            
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta {
+    width: 270px;              
+    padding: 20px;             
+    border: 2px solid #b9d4ec;  
+    border-radius: 12px;
+    margin-bottom: 10px;        
+    background-color: white;
+    text-align: center;
+}
+
+.tarjeta h3 {
+    color: #0b4f8a;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 ~ p {
+    margin-top: 0;
+}
+
+.comentario {
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.comentario + .fecha {
+    font-size: 13px;
+    color: #6b7c8d;
+    margin-bottom: 0;
+}
+
+.pie-pagina {
+    background-color: #08233d;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+}
+
+.pie-pagina p {
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    .navegacion {
+        flex-direction: column;   
+        gap: 10px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;        
+        justify-content: center;
+    }
+
+    .tarjeta {
+        width: 100%;          
+    }
+}
