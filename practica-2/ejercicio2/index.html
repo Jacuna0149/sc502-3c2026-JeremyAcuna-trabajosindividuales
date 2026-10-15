@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 | Manipulación del DOM | SC-502</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <p class="marca">Universidad Fidélitas | SC-502</p>
+            <h1>Ejercicio 2: Manipulación del DOM</h1>
+            <p>Cambiar el contenido de un párrafo con document.*</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="tarjeta">
+            <h2>Párrafo existente</h2>
+            <p id="parrafo" class="parrafo-demo">Este es el texto original del párrafo.
+               Presione el botón para cambiarlo.</p>
+            <button type="button" id="botonCambiar" class="boton boton-primario">
+                Cambiar contenido
+            </button>
+            <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer class="pie">SC-502 | Ejercicio 2 | JavaScript básico</footer>
+</body>
+</html>

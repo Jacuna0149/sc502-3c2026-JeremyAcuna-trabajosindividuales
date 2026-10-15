@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 | Cargas sociales | SC-502</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <p class="marca">Universidad Fidélitas | SC-502</p>
+            <h1>Ejercicio 1: Cálculo de cargas sociales</h1>
+            <p>Cargas sociales, impuesto sobre la renta y salario neto (Costa Rica, 2026)</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="presentacion">
+            <h2>Calculadora de salario</h2>
+            <p>Ingrese su salario bruto mensual en colones y presione el botón
+               para calcular las deducciones.</p>
+        </section>
+
+        <section class="tarjeta">
+            <h2>1. Salario bruto</h2>
+            <form id="formularioSalario" novalidate>
+                <div class="campo">
+                    <label for="salarioBruto">Salario bruto mensual (₡)</label>
+                    <input id="salarioBruto" type="number" min="0" step="any"
+                           placeholder="Ej.: 1500000" aria-describedby="ayudaSalario">
+                    <small id="ayudaSalario">Solo números, sin comas ni símbolos.</small>
+                </div>
+                <button type="submit" class="boton boton-primario">Calcular</button>
+            </form>
+            <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="resumen" aria-label="Resultados del cálculo">
+            <div class="dato">
+                <span class="numero numero-chico" id="resCargas">₡0,00</span>
+                <span>Cargas sociales</span>
+            </div>
+            <div class="dato">
+                <span class="numero numero-chico" id="resRenta">₡0,00</span>
+                <span>Impuesto sobre la renta</span>
+            </div>
+            <div class="dato dato-destacado">
+                <span class="numero numero-chico" id="resNeto">₡0,00</span>
+                <span>Salario neto</span>
+            </div>
+        </section>
+
+        <section class="tarjeta" id="detalleCalculo">
+            <h2>2. Detalle del cálculo</h2>
+            <p class="ayuda-campo">Aquí aparece el desglose después de calcular.</p>
+            <div id="detalleCargas"></div>
+            <div id="detalleRenta"></div>
+        </section>
+
+        <aside class="tarjeta ayuda">
+            <h2>Datos usados (período 2026)</h2>
+            <p><strong>Cargas sociales del trabajador: 10,83 %</strong> =
+               SEM 5,50 % + IVM 4,33 % + Banco Popular 1,00 %.</p>
+            <p><strong>Impuesto sobre salarios (mensual):</strong> hasta ₡918.000 exento;
+               10 % sobre el exceso hasta ₡1.347.000; 15 % hasta ₡2.364.000;
+               20 % hasta ₡4.727.000; 25 % sobre el exceso de ₡4.727.000.</p>
+            <p>El impuesto se calcula sobre el salario bruto. No se aplican
+               créditos fiscales por hijos ni cónyuge.</p>
+        </aside>
+    </main>
+    <footer class="pie">SC-502 | Ejercicio 1 | JavaScript básico</footer>
+</body>
+</html>

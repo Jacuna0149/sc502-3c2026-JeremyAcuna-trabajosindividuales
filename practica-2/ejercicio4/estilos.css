@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #202936;
+    background-color: #f8fafc;
+    line-height: 1.5;
+}
+.contenedor { width: 92%; max-width: 990px; margin: 0 auto; }
+.encabezado {
+    padding: 25px 0;
+    color: white;
+    background-color: #123f7a;
+    border-bottom: 5px solid #20b8c7;
+}
+.encabezado h1 { color: white; margin: 6px 0; }
+.encabezado p { margin: 5px 0; }
+.marca { font-weight: bold; }
+h2 { color: #0a2a55; }
+.presentacion { margin: 24px 0 16px; }
+.resumen { display: flex; gap: 12px; margin-bottom: 18px; }
+.dato {
+    flex: 1;
+    padding: 15px;
+    background-color: #eaf1f8;
+    border: 1px solid #ced4dd;
+    border-radius: 7px;
+}
+.numero { display: block; font-size: 28px; font-weight: bold; color: #123f7a; }
+.tarjeta {
+    margin-bottom: 18px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ced4dd;
+    border-radius: 7px;
+}
+.tarjeta h2 { margin-top: 0; }
+.ayuda-campo { color: #526072; }
+.campo { margin-bottom: 14px; }
+label { display: block; font-weight: bold; margin-bottom: 5px; }
+small { display: block; color: #526072; margin-top: 4px; }
+input, select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #8792a2;
+    border-radius: 5px;
+    background-color: white;
+}
+input:focus, select:focus { outline: 2px solid #20b8c7; }
+.fila-formulario { display: flex; gap: 14px; }
+.fila-formulario .campo { flex: 1; }
+.boton {
+    padding: 10px 14px;
+    border: 1px solid #123f7a;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.boton-primario { color: white; background-color: #123f7a; }
+.boton-primario:hover { background-color: #0a2a55; }
+.boton-claro { color: #123f7a; background-color: white; }
+.boton-claro:hover { background-color: #eaf1f8; }
+.boton-peligro { color: #b33c47; background-color: white; border-color: #b33c47; }
+.boton-peligro:hover { background-color: #fae9eb; }
+.mensaje { margin-bottom: 0; font-weight: bold; }
+.mensaje:empty { display: none; }
+.mensaje-error { color: #b33c47; }
+.mensaje-bien { color: #2e7b56; }
+.mensaje-aviso { color: #a46b00; }
+.barra-herramientas { display: flex; gap: 16px; align-items: end; }
+.barra-herramientas .campo { flex: 1; }
+.barra-herramientas button { margin-bottom: 14px; }
+.conteo-visible { color: #526072; }
+.lista { padding: 0; margin: 0; list-style: none; }
+.actividad {
+    padding: 13px;
+    margin-top: 10px;
+    border: 1px solid #ced4dd;
+    border-left: 5px solid #20b8c7;
+    border-radius: 5px;
+}
+.actividad strong { display: block; }
+.detalle { display: block; color: #526072; font-size: 14px; }
+.acciones { margin-top: 9px; }
+.acciones button { margin: 0 8px 4px 0; }
+.completada { background-color: #e8f5ee; border-left-color: #2e7b56; }
+.completada strong { text-decoration: line-through; }
+.prioridad-alta { color: #a46b00; font-weight: bold; }
+#estadoVacio { padding: 12px; background-color: #f1f4f7; }
+#estadoVacio:empty { display: none; }
+.ayuda { border-left: 5px solid #20b8c7; }
+code { color: #0a2a55; background-color: #f1f4f7; padding: 1px 4px; }
+.pie { padding: 18px; color: #526072; text-align: center; }
+@media (max-width: 640px) {
+    .resumen, .fila-formulario, .barra-herramientas { display: block; }
+    .dato { margin-bottom: 9px; }
+    .barra-herramientas button { margin-bottom: 14px; }
+}
+
+.dato-destacado { background-color: #e8f5ee; border-color: #2e7b56; }
+.dato-destacado .numero { color: #2e7b56; }
+.numero-chico { font-size: 22px; }
+.tabla { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.tabla th, .tabla td { padding: 8px; text-align: left; border-bottom: 1px solid #ced4dd; }
+.tabla th { color: #0a2a55; background-color: #eaf1f8; }
+.tabla .derecha { text-align: right; }
+.parrafo-demo { padding: 14px; background-color: #f1f4f7; border-left: 5px solid #20b8c7; border-radius: 5px; }
+.resultado-edad { font-size: 22px; }
+.estudiante { padding: 10px 13px; margin-top: 8px; border: 1px solid #ced4dd; border-left: 5px solid #20b8c7; border-radius: 5px; }
+.estudiante strong { display: inline; }
+.promedio { margin-top: 14px; padding: 14px; background-color: #eaf1f8; border: 1px solid #ced4dd; border-radius: 7px; font-weight: bold; color: #123f7a; }
+.navegacion { margin: 0 0 16px; }
+.navegacion a { color: #123f7a; }
