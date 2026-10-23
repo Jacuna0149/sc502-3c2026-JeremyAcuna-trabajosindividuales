@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de estudiantes | Caso de estudio | SC-502</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="contenedor">
+            <p class="curso">Ambiente Web Cliente/Servidor | SC-502</p>
+            <h1>Registro de estudiantes</h1>
+            <p class="subtitulo">Agregue estudiantes y consulte sus notas.</p>
+        </div>
+    </header>
+
+    <main class="contenedor principal">
+        <section class="panel panel-formulario" aria-labelledby="tituloFormulario">
+            <h2 id="tituloFormulario">Nuevo estudiante</h2>
+            <form id="formularioEstudiante" novalidate>
+                <fieldset>
+                    <legend>Datos del estudiante</legend>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" type="text" maxlength="40" placeholder="Ej.: Ana"
+                            autocomplete="off">
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellidos">Apellidos</label>
+                        <input id="apellidos" name="apellidos" type="text" maxlength="60"
+                            placeholder="Ej.: Vargas Solano" autocomplete="off">
+                    </div>
+
+                    <div class="campo">
+                        <label for="nota">Nota</label>
+                        <input id="nota" name="nota" type="number" min="0" max="100" step="any" placeholder="0 a 100"
+                            aria-describedby="ayudaNota">
+                        <small id="ayudaNota">Valor numérico entre 0 y 100.</small>
+                    </div>
+
+                    <button type="submit" class="boton">Agregar estudiante</button>
+                </fieldset>
+            </form>
+            <p id="mensaje" class="mensaje" role="alert" aria-live="polite"></p>
+        </section>
+
+        <section class="panel panel-datos" aria-labelledby="tituloLista">
+            <h2 id="tituloLista">Lista de estudiantes</h2>
+            <div class="tabla-contenedor">
+                <table class="tabla">
+                    <caption class="solo-lectores">Estudiantes registrados con su nota</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col" class="col-nota">Nota</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla"></tbody>
+                </table>
+            </div>
+            <p class="leyenda">
+                <span class="punto punto-alta"></span> Nota mayor o igual a 80
+                <span class="punto punto-baja"></span> Nota menor a 65
+            </p>
+
+            <section class="resumen" aria-labelledby="tituloResumen">
+                <h3 id="tituloResumen">Resumen</h3>
+                <dl class="tarjetas">
+                    <div class="tarjeta">
+                        <dt>Mayor nota</dt>
+                        <dd id="resMayor">-</dd>
+                    </div>
+                    <div class="tarjeta">
+                        <dt>Promedio</dt>
+                        <dd id="resPromedio">-</dd>
+                    </div>
+                    <div class="tarjeta">
+                        <dt>Nota más baja</dt>
+                        <dd id="resMenor">-</dd>
+                    </div>
+                </dl>
+            </section>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>SC-502 | Caso de estudio #1</p>
+    </footer>
+</body>
+
+</html>
